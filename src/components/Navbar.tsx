@@ -20,7 +20,7 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-10",
-        isScrolled ? "bg-dark-300/80 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -30,7 +30,7 @@ const Navbar = () => {
               AI
             </div>
           </div>
-          <span className="text-white font-bold text-xl">WildlifeAI</span>
+          <span className="text-gray-800 font-bold text-xl">WildlifeAI</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const Navbar = () => {
             <a 
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-neon-teal transition-colors duration-300 relative group"
+              className="text-gray-600 hover:text-neon-teal transition-colors duration-300 relative group"
             >
               {item}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-teal transition-all duration-300 group-hover:w-full" />
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:block">
-          <button className="bg-gradient-to-r from-neon-teal to-neon-blue text-black font-medium py-2 px-6 rounded-full hover:shadow-neon-teal transition-all duration-300 flex items-center space-x-1">
+          <button className="bg-gradient-to-r from-neon-teal to-neon-blue text-white font-medium py-2 px-6 rounded-full hover:shadow-neon-teal transition-all duration-300 flex items-center space-x-1">
             <span>Get Started</span>
             <ChevronRight size={16} />
           </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-gray-800"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -66,19 +66,19 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-dark-300/95 backdrop-blur-md z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-0 top-16 bg-light-100/95 backdrop-blur-md z-40 animate-fade-in">
           <nav className="flex flex-col items-center justify-center h-full space-y-8">
             {['Home', 'About', 'Features', 'Map', 'Blog', 'Contact'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-300 hover:text-neon-teal transition-colors duration-300 text-lg"
+                className="text-gray-600 hover:text-neon-teal transition-colors duration-300 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item}
               </a>
             ))}
-            <button className="bg-gradient-to-r from-neon-teal to-neon-blue text-black font-medium py-2 px-6 mt-4 rounded-full hover:shadow-neon-teal transition-all duration-300 flex items-center space-x-1">
+            <button className="bg-gradient-to-r from-neon-teal to-neon-blue text-white font-medium py-2 px-6 mt-4 rounded-full hover:shadow-neon-teal transition-all duration-300 flex items-center space-x-1">
               <span>Get Started</span>
               <ChevronRight size={16} />
             </button>
