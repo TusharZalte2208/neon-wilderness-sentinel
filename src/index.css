@@ -5,29 +5,6 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 172 100% 50%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 217.2 91.2% 59.8%;
-    --radius: 0.75rem;
-  }
-
-  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -46,7 +23,8 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --ring: 217.2 91.2% 59.8%;
+    --radius: 0.75rem;
   }
 }
 
@@ -61,7 +39,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased dark:bg-noise bg-light-200;
+    @apply bg-dark-300 text-foreground antialiased bg-noise;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
@@ -71,11 +49,11 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-light-300 dark:bg-gray-800;
+    @apply bg-dark-200;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+    @apply bg-muted rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
@@ -85,7 +63,7 @@
 
 @layer utilities {
   .glass-panel {
-    @apply backdrop-blur-md bg-white/70 dark:bg-black/40 border border-white/20 shadow-glass;
+    @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-glass;
   }
   
   .text-glow {
@@ -118,7 +96,7 @@
   }
 
   .shimmer-effect {
-    @apply bg-gradient-to-r from-transparent via-black/5 to-transparent bg-[length:200%_100%] animate-shimmer;
+    @apply bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%] animate-shimmer;
   }
 }
 

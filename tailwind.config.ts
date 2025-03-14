@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,13 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-                // Light mode colors
-                light: {
-                    100: "#FFFFFF",
-                    200: "#F5F5F5",
-                    300: "#EEEEEE",
+                // Custom colors
+                dark: {
+                    100: "#121212",
+                    200: "#0a0a0a",
+                    300: "#050505",
                 },
-                // Keep the neon colors for accents
                 neon: {
                     teal: "#0cffe1",
                     blue: "#4361ee",
@@ -140,7 +140,7 @@ export default {
                 'neon-blue': '0 0 5px #4361ee, 0 0 20px rgba(67, 97, 238, 0.3)',
                 'neon-purple': '0 0 5px #7209b7, 0 0 20px rgba(114, 9, 183, 0.3)',
                 'neon-pink': '0 0 5px #f72585, 0 0 20px rgba(247, 37, 133, 0.3)',
-                'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
+                'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.36)',
             },
 		}
 	},
